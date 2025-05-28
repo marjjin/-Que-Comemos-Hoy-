@@ -20,11 +20,15 @@ body{
     box-shadow: 0 4px 12px var(--negro);
     padding: 30px 30px;
     backdrop-filter: blur(10px);
-    margin: 0px 10px 30px 10px;
     border-radius: 10px;
     
 }
-.container {
+nav{
+  width: 100%;
+  height: 100%;
+}
+
+.fondo {
 
   width: 100%;
   height: 100%;
@@ -65,9 +69,7 @@ list-style: none;
 gap: 40px ;
 }
 
-main{
-    margin: 10px 50px 50px 50px;
-}
+
 
 .btn-nav {
   border: 3px solid  var(--negro);
@@ -92,18 +94,71 @@ a{
     color: var(--negro);
 }
 
-.contenedor {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 5px 10px 20px var(--negro);
-    padding: 10px 10px;
-    backdrop-filter: blur(10px);
-    margin: 10px 100px 100px 100px;
-    border-radius: 10px;
-    border:2px solid var(--negro);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-style: oblique;
+.card {
+  --bg: #f7f7f8;
+  --hover-bg: #ffe5f4;
+  --hover-text: #e50087;
+  max-width: 23ch;
+  text-align: center;
+  background: var(--bg);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  transition:
+    0.3s cubic-bezier(0.6, 0.4, 0, 1),
+    transform 0.15s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  color: black;
+  margin: 30px 30px;
+}
+
+.card__body {
+  color: #464853;
+  line-height: 1.5em;
+  font-size: 1em;
+}
+
+.card > :not(span) {
+  transition: 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card > strong {
+  display: block;
+  font-size: 1.4rem;
+  letter-spacing: -0.035em;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--negro);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: all 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card:hover {
+  background: #eee7b2;
+}
+
+.card:hover > div,
+.card:hover > strong {
+  opacity: 0;
 }
