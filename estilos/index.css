@@ -1,0 +1,61 @@
+@import url(/estilos/style.css);
+
+@import url(/estilos/style.css);
+
+/*-------------------------------------------
+  PALETA DE COLORES (importada desde style.css)
+--------------------------------------------*/
+
+/*-------------------------------------------
+  SECCIÓN: CONTENEDOR DE LA PÁGINA DE INICIO
+--------------------------------------------*/
+
+/* Fondo con imagen y centrado de contenido */
+.cardbox{
+
+  width: auto;
+  background-image: url('/img/fotobanner.jpg'); /* imagen de fondo principal */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Contenedor general de presentación */
+.inicio {
+  display: flex;
+  max-width: 300px;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  gap: 3px;
+  border-radius: 10px;
+}
+
+/*-------------------------------------------
+  SECCIÓN: TÍTULO "¿Qué comemos hoy?"
+--------------------------------------------*/
+.titulo {
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--naranja);
+  margin-top: 30px;
+  letter-spacing: 1px;
+  text-shadow: 
+    2px 2px 0 var(--amarillo), 
+    4px 4px 6px rgba(32, 30, 31, 0.4); /* sombra suave */
+  background: linear-gradient(90deg, var(--naranja), var(--amarillo));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: 0.4s;
+}
+
+.titulo:hover{
+  font-size: 3rem;
+}
+
