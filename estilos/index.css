@@ -1,61 +1,87 @@
 @import url(/estilos/style.css);
 
-@import url(/estilos/style.css);
+    .cardbox {
+      width: 100%;
+      background-image: url('/img/sanguches.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-/*-------------------------------------------
-  PALETA DE COLORES (importada desde style.css)
---------------------------------------------*/
+    .inicio {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 100px;
+      max-width: 2000px;
+      width: 100%;
+      margin-top: 20px;
+    }
 
-/*-------------------------------------------
-  SECCIÓN: CONTENEDOR DE LA PÁGINA DE INICIO
---------------------------------------------*/
+    .titulo {
+      text-align: center;
+      font-family: 'Parade', sans-serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--negro);
+      margin-top: 20px;
+      transition: 0.4s;
+    }
 
-/* Fondo con imagen y centrado de contenido */
-.cardbox{
+    .titulo:hover {
+      transform: scale(1.2);
+      text-shadow: 10px 15px 15px var(--negro);
+    }
 
-  width: auto;
-  background-image: url('/img/fotobanner.jpg'); /* imagen de fondo principal */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
+    .card-somos {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 25px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
 
-/* Contenedor general de presentación */
-.inicio {
-  display: flex;
-  max-width: 300px;
-  flex-wrap: wrap;
-  align-content: center;
-  justify-content: center;
-  gap: 3px;
-  border-radius: 10px;
-}
+    .card-somos:hover {
+      transform: scale(1.2);
+      box-shadow: 10px 10px 10px var(--negro);
+    }
 
-/*-------------------------------------------
-  SECCIÓN: TÍTULO "¿Qué comemos hoy?"
---------------------------------------------*/
-.titulo {
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 2.8rem;
-  font-weight: 700;
-  color: var(--naranja);
-  margin-top: 30px;
-  letter-spacing: 1px;
-  text-shadow: 
-    2px 2px 0 var(--amarillo), 
-    4px 4px 6px rgba(32, 30, 31, 0.4); /* sombra suave */
-  background: linear-gradient(90deg, var(--naranja), var(--amarillo));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  transition: 0.4s;
-}
+    .card-somos h2 {
+      color: var(--negro);
+      font-size: 2rem;
+      margin-bottom: 15px;
+    }
 
-.titulo:hover{
-  font-size: 3rem;
-}
+    .card-somos p {
+      color: var(--negro);
+      font-size: 1.3rem;
+      line-height: 1.6;
+    }
 
+    @media screen and (max-width: 768px) {
+      .inicio {
+        flex-direction: column;
+        align-items: center;
+        max-width: 100%;
+      }
+
+      .titulo{
+        font-size: 1.5rem;
+      }
+       .card-somos {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 15px;
+      width: 100%;
+      max-width: 250px;
+     
+    
+    
+    }
+    }

@@ -15,7 +15,10 @@
 body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 }
+
+
 
 /*========================
   🔲 CONTENEDOR CON FONDO ANIMADO
@@ -61,14 +64,15 @@ body {
   top: 0;
   z-index: 1000;
   display: flex;
-  justify-content: flex-start;
+ justify-content: center;
   align-items: center;
   height: 80%;
   background-color: #f0ee80;
   box-shadow: 0 4px 12px var(--negro);
-  padding: 0px 40px 0px 40px;
+  padding: 0px 20px;
   backdrop-filter: blur(10px);
   animation: fadeSlideDown 1s ease-out;
+  flex-wrap: wrap;
 }
 
 /* Animación de entrada de header */
@@ -155,6 +159,7 @@ body {
   align-items: center;
   animation: fadeSlideDown 1s ease-out;
   padding: 0px 200px 0px 0px ;
+  max-width: 100%;
  
 }
 
@@ -175,7 +180,8 @@ body {
   🔎 BUSCADOR CON ICONO
 ==========================*/
 .input-container {
-  width: 220px;
+  width: 100%;
+  max-width: 500px;
   position: relative;
 }
 
@@ -220,28 +226,26 @@ body {
 
 
 /*=========RESPONSIVE ZONE===============*/
-@media (max-width: 1200px) {
+/*========= RESPONSIVE PARA 768px ==========*/
+@media (max-width: 768px) {
 
-  /* Ajustar header */
   .navegacion {
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
     gap: 20px;
   }
 
-  /* Menú en columna */
   .menu-links ul {
     flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
+    gap: 20px;
   }
 
   .btn-nav {
-    padding: 12px 30px;
-    font-size: 16px;
+    padding: 10px 25px;
+    font-size: 15px;
   }
 
-  /* Logo más chico y centrado */
   .logo {
     padding: 0;
     margin: 10px 0;
@@ -249,49 +253,100 @@ body {
   }
 
   .logo-tipo {
-    width: 100px;
+    width: 90px;
   }
 
-}
-
-/* Botón hamburguesa oculto por defecto */
-.menu-toggle {
-  display: none;
-  font-size: 28px;
-  background: none;
-  border: none;
-  color: var(--negro);
-  cursor: pointer;
-}
-
-/* Estilos móviles */
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    z-index: 999;
-  }
-
-  .menu-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    background-color: var(--amarillo);
+  .input-container {
     width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin-top: 10px;
   }
 
-  .menu-links.active {
-    display: block;
+  .input {
+    font-size: 13px;
+  }
+}
+
+/*========= RESPONSIVE PARA 500px ==========*/
+/* ========= MEDIA QUERIES ========= */
+
+/* Para pantallas hasta 1070px */
+@media (max-width: 1070px) {
+  .navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
   }
 
+  .input-container {
+    width: 100%;
+    max-width: 500px;
+  }
+
+  .logo {
+    padding: 0;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* Para pantallas hasta 768px */
+@media (max-width: 768px) {
   .menu-links ul {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
+  }
+
+  .btn-nav {
+    padding: 10px 25px;
+    font-size: 16px;
+    display: inline-block;
+    width: auto;
+  }
+
+  .logo {
+    justify-content: center;
+    padding: 0;
+  }
+
+  .input-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .navegacion {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+}
+
+/* Para pantallas hasta 500px */
+@media (max-width: 500px) {
+   .navegacion {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  .btn-nav {
+    padding: 10px 25px;
+    font-size: 16px;
+    display: inline-block;
+    width: auto;
+  }
+
+  .logo {
+    padding: 0;
+    margin-top: 10px;
+  }
+
+  .input-container {
+    width: 70%;
+  }
+
+  .navegacion {
+    padding: 10px;
   }
 }
