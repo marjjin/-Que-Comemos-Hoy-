@@ -9,8 +9,8 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+    
     }
-
     .inicio {
       display: flex;
       flex-wrap: wrap;
@@ -45,7 +45,7 @@
       box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
       text-align: center;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      margin: 0px 0px 50px 0px;
+      margin: 0px 0px 0px 0px;
     }
 
     .card-somos:hover {
@@ -65,15 +65,54 @@
       line-height: 1.6;
     }
 
+
+    /*CAJA COMIDAS*/
+    .caja-comida{
+      height: 600px;
+      width: 100%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      display: flex;
+      justify-content: center;
+    }
+    .caja-comida a{
+      justify-content: center;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      transition: 0.3s;
+    }
+    .caja-comida h2{
+      font-size: 10rem;
+      text-decoration: none;
+      color: var(--negro);
+      text-shadow: var(--negro)0px 10px 15px;
+      padding: 0px;
+      font-family: 'Parade', sans-serif;
+      width: auto;
+      height: auto;
+    }
+    .caja-comida a{
+      text-decoration: none;
+      padding: auto;
+    }
+    .caja-comida a:hover {
+      transform: scale(1.5);
+    }
+
+
     /*TOOL TIPS REDES*/
-    ul {
+
+ul {
   list-style: none;
-  }
+}
 
 .example-2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0px 40px 0px 40px;
 }
 .example-2 .icon-content {
   margin: 20px;
@@ -161,6 +200,9 @@
 .example-2 .icon-content a[data-social="youtube"] ~ .tooltip {
   background-color: #ff0000;
 }
+
+
+
     /* RESPONSIVE ZONE */
     @media screen and (max-width: 768px) {
       .inicio {
@@ -177,7 +219,6 @@
       padding: 10px;
       border-radius: 15px;
       width: 70%;
-   
     }
     }
 
