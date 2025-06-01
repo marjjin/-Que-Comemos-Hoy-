@@ -1,15 +1,14 @@
 @import url(/estilos/style.css);
 
     .cardbox {
-      width: 100%;
-      background-image: url('/img/sanguches.jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center;
+
       display: flex;
       flex-direction: column;
       align-items: center;
-    
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      background-color: #0000001f;
+      margin: 40px;
     }
     .inicio {
       display: flex;
@@ -69,36 +68,38 @@
     /*CAJA COMIDAS*/
     .caja-comida{
       height: 600px;
-      width: 100%;
       background-size: cover;
       background-repeat: no-repeat;
       background-position: center;
       display: flex;
       justify-content: center;
+      margin: 40px;
+      border-radius: 10px;
+      transition: 0.3s ease-in-out;
+      overflow: hidden;
+    }
+    .caja-comida:hover{
+      transform: scale(1.02);
+      box-shadow: var(--negro)8px 8px 24px;
     }
     .caja-comida a{
       justify-content: center;
       display: flex;
       width: 100%;
       height: 100%;
-      transition: 0.3s;
+      transition: 0.3s ease-in-out;
+      text-decoration: none;
+      padding: auto;
     }
     .caja-comida h2{
       font-size: 10rem;
       text-decoration: none;
       color: var(--negro);
       text-shadow: var(--negro)0px 10px 15px;
-      padding: 0px;
       font-family: 'Parade', sans-serif;
-      width: auto;
-      height: auto;
-    }
-    .caja-comida a{
-      text-decoration: none;
-      padding: auto;
     }
     .caja-comida a:hover {
-      transform: scale(1.5);
+      transform: scale(1.1);
     }
 
 
@@ -112,7 +113,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0px 40px 0px 40px;
+  padding: 40px;
 }
 .example-2 .icon-content {
   margin: 20px;
@@ -220,5 +221,28 @@ ul {
       border-radius: 15px;
       width: 70%;
     }
+    .caja-comida {
+      height: auto;
+      margin: 20px;
     }
 
+    .caja-comida h2 {
+      font-size: 5rem;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    .caja-comida {
+      height: auto;
+      margin: 10px;
+      border-radius: 8px;
+    }
+
+    .caja-comida h2 {
+      font-size: 3rem;
+    }
+
+    .caja-comida a:hover {
+      transform: scale(1.03); /* más suave en móviles */
+    }
+  }
